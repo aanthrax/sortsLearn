@@ -72,19 +72,29 @@ int binSearch(int* ar, int size, int el) {
 	return -1;
 }
 
-int test_Ar(int *ar, int size){
-	int count = 0;
+void test_Ar(int *ar, int size){
+	int count = 1;
 
 	for(int i = 0; i < size; i++){
 		if(ar[i] <= ar[i+1]){
-			return 1;
+			count++;
 		}
 
 		if(ar[i] >= ar[i+1]){
-			return 2;
+			count--;
 		}
 	}
 
-	return 0;
+	if(count == size - 1){
+		std::cout << "1" << std::endl;
+	}
+
+	else if(count == -size + 1){
+		std::cout << "2" << std::endl;
+	}
+
+	else if (count != size - 1 || count != -size + 1){
+		std::cout << "0" << std::endl;
+	}
 }
 
