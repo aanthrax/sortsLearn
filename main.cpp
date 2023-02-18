@@ -6,7 +6,7 @@
 
 int main(){
         int step = 100;
-	double time_bubble = 0;
+	int time_bubble = 0;
 	int time_insertion = 0;
 	int time_selection = 0;
 	int time_quick = 0;
