@@ -11,11 +11,11 @@ int main(){
 	int time_selection = 0;
 	int time_quick = 0;
 	int time_merge = 0;
-	std::cout << "SIZE" << '\t' << "bubble sort" << '\t' << "insertion sort" << '\t' << "selection sort" << '\t' << "quick sort" << '\t' << "merge sort" << '\t' << std::endl;
+//	std::cout << "SIZE" << "\t" << "bubble sort" << "\t" << "insertion sort" << "\t" << "selection sort" << "\t" << "quick sort" << "\t" << "merge sort" << "\t" << std::endl;
         
 	for(int SIZE = 100; SIZE <= 10000000; SIZE += step){
                 int* ar =  new int [SIZE];
-                std::cout << SIZE << '\t';
+                std::cout << SIZE << "\t";
 
                 //bubbleSort
 		randomFill(ar, SIZE, 0, 999);
@@ -29,11 +29,11 @@ int main(){
 
                 	end = std::chrono::high_resolution_clock::now();
                 	diff = end - start;
-                	std::cout << diff.count() << '\t';
+                	std::cout << diff.count() << "\t";
 			time_bubble = diff.count();
 		}
 		else if(time_bubble >= 60){
-			std::cout << '\t';
+			std::cout << "\t";
 		}
 
                 //insertionSort
@@ -48,11 +48,11 @@ int main(){
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
-                        std::cout << diff.count() << '\t';
+                        std::cout << diff.count() << "\t";
                         time_insertion = diff.count();
                 }
                 else if(time_insertion >= 60){
-			std::cout << '\t';
+			std::cout << "\t";
                 }
 
                 //selectionSort
@@ -67,11 +67,11 @@ int main(){
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
-                        std::cout << diff.count() << '\t';
+                        std::cout << diff.count() << "\t";
                         time_selection = diff.count();
                 }
                 else if(time_selection >= 60){
-                        std::cout << '\t';
+                        std::cout << "\t";
                 }
 
 
@@ -87,11 +87,11 @@ int main(){
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
-                        std::cout << diff.count() << '\t';
+                        std::cout << diff.count() << "\t";
                         time_quick = diff.count();
                 }
                 else if(time_quick >= 60){
-                        std::cout << '\t';
+                        std::cout << "\t";
                 }
 		
 
@@ -107,11 +107,11 @@ int main(){
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
-                        std::cout << diff.count() << '\t';
+                        std::cout << diff.count() << "\t";
                         time_merge = diff.count();
                 }
                 else if(time_merge >= 60){
-                        std::cout << '\t';
+                        std::cout << "\t";
                 }
 
 
