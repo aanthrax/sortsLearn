@@ -19,4 +19,6 @@ void quickSort(int*, int);
 
 static void merge(int*, int, int);
 
+void countSort(int*, int*, int);
+
 #endif //SORTS_HPP
