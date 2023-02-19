@@ -7,7 +7,7 @@ void swap(int &a,int  &b){
 	b = temp;
 }
 
-
+какое отношение эта функция имеет к сортировкам???
 int search(int *ar, int size, int i){
         int min = ar[i];
         int index = 0;
@@ -120,6 +120,7 @@ void mergeSort(int* ar, int size) {
     merge(ar, size, size >> 1);
 }
 
+эту функцию надо доделать....
 void countSort(int *bigAr, int *smallAr,int size){
 	for(int j = 0; j < size; j++){
 		int num = bigAr[j];

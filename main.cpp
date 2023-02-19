@@ -11,9 +11,20 @@ int main(){
 	int time_selection = 0;
 	int time_quick = 0;
 	int time_merge = 0;
-	std::cout << "SIZE" << "\t" << "bubble sort" << "\t" << "insertion sort" << "\t" << "selection sort" << "\t" << "quick sort" << "\t" << "merge sort" << "\t" << std::endl;
-        
-	for(int SIZE = 100; SIZE <= 10000000; SIZE += step){
+	std::cout 	<< "SIZE\t"	-- можно так.... 
+			<< "bubble sort\t"
+			<< "insertion sort" << "\t" -- так не обязательно... надо исправить
+			<< "selection sort" << "\t"
+			<< "quick sort" << "\t" 
+			<< "merge sort" << "\t" << std::endl; 
+-- из этой строчки тоже можно сделать функцию.... да она будет очень маленькая... но так обычно делают, чтобы не захламлять основной текст программы....
+
+	auto getCurStep = [](int size) {
+		вот здесь пишешь свои if....else if... else... которые снизу
+		return 100;
+	};
+большими буквами обозначают либо макросы либо константы        
+	for(int SIZE = 100; SIZE <= 10000000; SIZE += getCurStep(SIZE)){
                 int* ar =  new int [SIZE];
                 std::cout << SIZE << "\t";
 
@@ -117,7 +128,7 @@ int main(){
 
                 std::cout<<std::endl;
                 delete[] ar;
-
+//я бы сделал из этого функцию... которая возвращала бы шаг изменения массива
                 if(SIZE >= 500 && SIZE < 1000){
                          step = 250;
                 }
