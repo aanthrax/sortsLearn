@@ -8,6 +8,6 @@ int getMin(const int*, int);
 
 int binSearch(int*, int, int);
 
-void test_Ar(int*, int);
+int test_Ar(int*, int);
 
 #endif //STATARRAY_HPP
