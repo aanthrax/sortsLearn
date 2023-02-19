@@ -11,7 +11,7 @@ int main(){
 	int time_selection = 0;
 	int time_quick = 0;
 	int time_merge = 0;
-//	std::cout << "SIZE" << "\t" << "bubble sort" << "\t" << "insertion sort" << "\t" << "selection sort" << "\t" << "quick sort" << "\t" << "merge sort" << "\t" << std::endl;
+	std::cout << "SIZE" << "\t" << "bubble sort" << "\t" << "insertion sort" << "\t" << "selection sort" << "\t" << "quick sort" << "\t" << "merge sort" << "\t" << std::endl;
         
 	for(int SIZE = 100; SIZE <= 10000000; SIZE += step){
                 int* ar =  new int [SIZE];
