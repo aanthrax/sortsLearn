@@ -120,9 +120,11 @@ void mergeSort(int* ar, int size) {
     merge(ar, size, size >> 1);
 }
 
-void countSort(int *bigAr, int *smallAr,int size){
+void countSort(int *bigAr, int *smallAr, int size){
 	for(int j = 0; j < size; j++){
 		int num = bigAr[j];
-		smallAr[num] = smallAr[num] + 1;
+		smallAr[num] += 1;
 	}
+
+
 }
