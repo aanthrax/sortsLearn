@@ -10,6 +10,7 @@ int main(){
 	int time_selection = 0;
 	int time_quick = 0;
 	int time_merge = 0;
+<<<<<<< HEAD
 	int time_count = 0;
 	
         std::cout << "size\tbuble sort\tinsertion sort\tselection sort\tquick sort\tmerge sort\tcount sort"  << std::endl;
@@ -41,6 +42,24 @@ int main(){
 	for(int size = 100; size <= 10000000; size += getCurStep(size)){
                 int* ar =  new int [size];
                 std::cout << size << "\t";
+=======
+	std::cout 	<< "SIZE\t"	-- можно так.... 
+			<< "bubble sort\t"
+			<< "insertion sort" << "\t" -- так не обязательно... надо исправить
+			<< "selection sort" << "\t"
+			<< "quick sort" << "\t" 
+			<< "merge sort" << "\t" << std::endl; 
+-- из этой строчки тоже можно сделать функцию.... да она будет очень маленькая... но так обычно делают, чтобы не захламлять основной текст программы....
+
+	auto getCurStep = [](int size) {
+		вот здесь пишешь свои if....else if... else... которые снизу
+		return 100;
+	};
+большими буквами обозначают либо макросы либо константы        
+	for(int SIZE = 100; SIZE <= 10000000; SIZE += getCurStep(SIZE)){
+                int* ar =  new int [SIZE];
+                std::cout << SIZE << "\t";
+>>>>>>> 5e97eaba185534249f1104a211fc53d4faa28c84
 
                 //bubbleSort
 		randomFill(ar, size, 0, 999);
@@ -162,6 +181,28 @@ int main(){
 
                 std::cout<<std::endl;
                 delete[] ar;
+<<<<<<< HEAD
+=======
+//я бы сделал из этого функцию... которая возвращала бы шаг изменения массива
+                if(SIZE >= 500 && SIZE < 1000){
+                         step = 250;
+                }
+                else  if(SIZE >= 1000 && SIZE < 10000){
+                         step = 1000;
+                }
+		else  if(SIZE >= 10000 && SIZE < 100000){
+                         step = 5000;
+                }
+                else if(SIZE >= 100000 && SIZE < 200000){
+                         step = 10000;
+                }
+                else  if(SIZE >= 200000 && SIZE < 1000000){
+                         step = 100000;
+                }
+                else  if(SIZE >= 1000000 && SIZE < 10000000){
+                         step = 1000000;
+                }
+>>>>>>> 5e97eaba185534249f1104a211fc53d4faa28c84
 	}
 
 	return 0;
