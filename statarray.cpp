@@ -69,7 +69,7 @@ int binSearch(int* ar, int size, int el) {
 
 int test_Ar(int *ar, int size){
 	int count = 0;
-	for(int i = 0; i < size; i++){
+	for(int i = 0; i < size - 1; i++){
 		if(ar[i] <= ar[i+1]){
 			count++;
 		}
@@ -79,7 +79,7 @@ int test_Ar(int *ar, int size){
 		}
 	}
 
-	if(count == size - 2){
+	if(count == size - 1){
 		return 1;
 	}
 
