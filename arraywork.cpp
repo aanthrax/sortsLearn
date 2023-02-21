@@ -1,6 +1,14 @@
 #include "arraywork.hpp"
 
 
+void random(int *ar, int size){
+        srand(time(nullptr));
+        for (int i = 0; i < size; i++) {
+                ar[i] = rand() % 100;
+        }
+}
+
+
 void randomFill(int *ar, int size, int min, int max){
         srand(time(nullptr));
         for (int i = 0; i < size; i++){

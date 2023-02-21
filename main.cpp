@@ -4,7 +4,7 @@
 
 
 
-int main(){
+int time_test_task1(){
 	int time_bubble = 0;
 	int time_insertion = 0;
 	int time_selection = 0;
@@ -107,7 +107,7 @@ int main(){
                         std::chrono::time_point<std::chrono::high_resolution_clock> end;
                         start = std::chrono::high_resolution_clock::now();
 
-                        quickSort(ar, size);
+                        quickSort_up(ar, size);
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
@@ -127,7 +127,7 @@ int main(){
                         std::chrono::time_point<std::chrono::high_resolution_clock> end;
                         start = std::chrono::high_resolution_clock::now();
 
-                        mergeSort(ar, size);
+                        mergeSort_up(ar, size);
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
@@ -163,5 +163,75 @@ int main(){
                 delete[] ar;
 	}
 
+	return 0;
+}
+
+
+int time_test_task2_quickSort(){
+	int ar[1000000];
+	random(ar, 1000000);
+	
+	std::chrono::time_point<std::chrono::high_resolution_clock> start;
+        std::chrono::duration<double> diff;
+        std::chrono::time_point<std::chrono::high_resolution_clock> end;
+        start = std::chrono::high_resolution_clock::now();
+        quickSort_up(ar, 1000000);
+        end = std::chrono::high_resolution_clock::now();
+        diff = end - start;
+        std::cout << "time of sorting unsorted array with quick sort ascending: " << diff.count() << std::endl;
+
+	start = std::chrono::high_resolution_clock::now();
+	quickSort_up(ar, 1000000);
+	end = std::chrono::high_resolution_clock::now();
+	diff = end - start;
+	std::cout << "time of sorting sorted array with quick sort ascending: " << diff.count() << std::endl;
+
+	start = std::chrono::high_resolution_clock::now();
+	quickSort_down(ar, 1000000);
+	end = std::chrono::high_resolution_clock::now();
+	diff = end - start;
+	std::cout << "time of sorting array with quick sort descending: " << diff.count() << std::endl;
+
+	return 0;
+	
+}
+
+
+
+int time_test_task2_mergeSort(){
+	int ar[1000000];
+	random(ar, 1000000);
+	
+	std::chrono::time_point<std::chrono::high_resolution_clock> start;
+        std::chrono::duration<double> diff;
+        std::chrono::time_point<std::chrono::high_resolution_clock> end;
+        start = std::chrono::high_resolution_clock::now();
+        mergeSort_up(ar, 1000000);
+        end = std::chrono::high_resolution_clock::now();
+        diff = end - start;
+        std::cout << "time of sorting unsorted array with merge sort ascending: " << diff.count() << std::endl;
+
+        start = std::chrono::high_resolution_clock::now();
+        mergeSort_up(ar, 1000000);
+        end = std::chrono::high_resolution_clock::now();
+        diff = end - start;
+        std::cout << "time of sorting sorted array with merge sort ascending: " << diff.count() << std::endl;
+
+        start = std::chrono::high_resolution_clock::now();
+        mergeSort_down(ar, 1000000);
+        end = std::chrono::high_resolution_clock::now();
+        diff = end - start;
+        std::cout << "time of sorting array with merge sort descending: " << diff.count() << std::endl;
+
+	return 0;
+}
+
+
+int main(){
+
+	time_test_task1();
+	time_test_task2_quickSort();
+	time_test_task2_mergeSort();
+	
 	return 0;
 }

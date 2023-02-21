@@ -13,11 +13,15 @@ void insertionSort(int*, int);
 
 void selectionSort(int*, int);
 
-void mergeSort(int*, int);
+void quickSort_up(int*, int);
 
-void quickSort(int*, int);
+void quickSort_down(int*, int);
 
-static void merge(int*, int, int);
+static void merge_up(int*, int, int);
+void mergeSort_up(int*, int);
+
+static void merge_down(int*, int, int);
+void mergeSort_down(int*, int);
 
 void countSort(int*, int*, int);
 

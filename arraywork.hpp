@@ -3,6 +3,8 @@
 #include <iostream>
 #include <time.h>
 
+void random(int*, int);
+
 void randomFill(int*, int, int, int);
 
 int showEl(const int*, int, int, int);
