@@ -194,10 +194,26 @@ void mergeSort_down(int* ar, int size) {
 }
 
 
-void countSort(int *bigAr, int *smallAr,int size){
-	for(int j = 0; j < size; j++){
-		int num = bigAr[j];
-		smallAr[num] += 1;
+void countSort(int *bigAr,int size){
+	int smallAr[getMax(bigAr, size) + 1];
+	
+	for(int i = 0; i < getMax(bigAr, size) + 1; i++){
+		smallAr[i] = 0;
 	}
 
+	for(int i = 0; i < size; i++){
+		smallAr[bigAr[i]]++;	
+	}
+	
+	for(int i = 0, j = 0; i < size;){
+		if(smallAr[j] > 0){
+			bigAr[i] = j;
+			--smallAr[j];
+			++i;
+		}
+		else if(smallAr[j] == 0){
+			++j;
+		}
+
+	}
 }

@@ -11,8 +11,4 @@ int showEl(const int*, int, int, int);
 
 void show(int*, int);
 
-void printBigAr(int*, int);
-
-void printSmallAr(int*);
-
 #endif //ARRAYWORK_HPP

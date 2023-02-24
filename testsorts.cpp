@@ -10,7 +10,7 @@ void test_quickSort() {
 		std::cout << ar_test[i] << " "; //std::endl;
 	}
 	std::cout << std::endl;
-	quickSort(ar_test, 10);
+	quickSort_up(ar_test, 10);
 	for (int i = 0; i < 10; i++) {
 		std::cout << ar_test[i] << " "; //std::endl;
 	}
@@ -28,7 +28,7 @@ void test_mergeSort(){
 		const int SIZE_AR = 10;
 		int ar[SIZE_AR] = {1, 2, 1, 2, 0, 0, -9, 90, -11};
 		show(ar, SIZE_AR);
-		mergeSort(ar, SIZE_AR);
+		mergeSort_up(ar, SIZE_AR);
 		show(ar, SIZE_AR);
 	}
 

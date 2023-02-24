@@ -1,5 +1,6 @@
 #ifndef SORTS_HPP
 #define SORTS_HPP
+#include "statarray.hpp"
 #include <iostream>
 #include <cstring>
 
@@ -23,6 +24,6 @@ void mergeSort_up(int*, int);
 static void merge_down(int*, int, int);
 void mergeSort_down(int*, int);
 
-void countSort(int*, int*, int);
+void countSort(int*, int);
 
 #endif //SORTS_HPP

@@ -4,9 +4,8 @@
 int getMax(const int *ar, int size){
 	static int left = 0;
         if(size - 1 == left){
-                std::cout << "max = " << ar[left] << std::endl;
+                return ar[left];
 		left = 0;
-                return 0;
         }
 
         if(ar[left] <= ar[size - 1]){
@@ -19,17 +18,16 @@ int getMax(const int *ar, int size){
 
         getMax(ar, size);
 
-        return 0;
+        return ar[left];
 }
 
 
 int getMin(const int *ar, int size){        
 	static int left = 0;
         if(size - 1 == left){
-                std::cout << "min = " << ar[left] << std::endl;
-                left = 0;
-		return 0;
-        }
+		return ar[left];
+        	left = 0;
+	}
 
 
         if(ar[left] <= ar[size - 1]){
@@ -40,9 +38,9 @@ int getMin(const int *ar, int size){
                 left++;
         }
 
-        getMin(ar,size);
+        getMin(ar, size);
 
-        return 0;
+        return ar[left];
 }
 
 

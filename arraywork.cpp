@@ -51,29 +51,3 @@ int showEl(const int *ar, int size, int n, int m){
         return 0;
 }
 
-
-void printBigAr(int *bigAr, int size){
-	for(int i = 0; i < size; i++){
-		std::cout << bigAr[i] << "\t";
-        }
-	std::cout << "\n";
-}
-
-
-void printSmallAr(int *smallAr){
-	for(int i = 0; i < 100; i++){
-		if(smallAr[i] <= 10){
-			for(int k = 0; k < smallAr[i]; k ++){
-				std::cout << i << " " << "\t";
-			}
-			std::cout << "\n";
-		}
-		else{
-			for(int k = 0; k < 10; k ++){
-				std::cout << i << " " << "\t";
-			}
-			std::cout << " - " << smallAr[i] - 10 << "\n";
-		}
-
-	}
-}

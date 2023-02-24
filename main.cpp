@@ -140,14 +140,13 @@ int time_test_task1(){
 
 		//countSort
                 randomFill(ar, size, 0, 999);
-		int smallAr[1000];
                 if(time_count < 60){
                         std::chrono::time_point<std::chrono::high_resolution_clock> start;
                         std::chrono::duration<double> diff;
                         std::chrono::time_point<std::chrono::high_resolution_clock> end;
                         start = std::chrono::high_resolution_clock::now();
 
-                        countSort(ar,smallAr, size);
+                        countSort(ar, size);
 
                         end = std::chrono::high_resolution_clock::now();
                         diff = end - start;
@@ -230,8 +229,8 @@ int time_test_task2_mergeSort(){
 int main(){
 
 	time_test_task1();
-	time_test_task2_quickSort();
-	time_test_task2_mergeSort();
+//	time_test_task2_quickSort();
+//	time_test_task2_mergeSort();
 	
 	return 0;
 }
